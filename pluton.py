@@ -13,8 +13,6 @@ if not os.path.exists(args.file):
     print("Error! File does not exist. Maybe you did a --> tpyo? <-- (typo)")
     quit()
 
-horange = [0, 50]
-verange = [0, 50]
 row = 0
 im = Image.open(args.file)
 rgb_im = im.convert('RGBA')
@@ -24,6 +22,9 @@ result = ""
 progress = 0
 width, height = im.size
 goal = width * height
+
+horange = [0, width]
+verange = [0, height]
 
 result = ''
 tresult = ''
